@@ -10,7 +10,7 @@ module.exports = {
     filename: 'bundle.js'
   },
   devServer: {
-    contentBase: path.resolve(__dirname, 'public')
+    contentBase: path.resolve(__dirname, 'static')
   },
   module: {
     rules: [
@@ -20,7 +20,7 @@ module.exports = {
   },
   plugins: [
       new CopyWebpackPlugin([
-          { from: 'public' }
+          { from: 'static' }
       ])
   ]
 };
